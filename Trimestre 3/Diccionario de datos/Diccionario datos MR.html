@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="WB DataDic" />
+    <meta name="description" content="mydb Data Dictionary." />
+    <link rel="stylesheet" href="styles.css">
+    <title>Diccionario de datos Lyon Programing</title>
+    <style type="text/css">
+   
+    </style>
+</head>
+<body>
+<div id="title-sect">
+<h1>Diccionario de datos  <br> Lyon Programing </h1><img src="Logo.png"alt="">
+</div>
+
+<ul>
+<li><a  href='#Boletin'>Boletin</a></li>
+<li><a href='#Estudiante'>Estudiante</a></li>
+<li><a href='#G_Administrativo'>G_Administrativo</a></li>
+<li><a href='#Grado'>Grado</a></li>
+<li><a href='#Horario'>Horario</a></li>
+<li><a href='#Materia'>Materia</a></li>
+<li><a href='#Nota'>Nota</a></li>
+<li><a href='#Observacion'>Observacion</a></li>
+<li><a href='#Observador'>Observador</a></li>
+<li><a href='#Profesor'>Profesor</a></li>
+<li><a href='#Profesor_has_Materia'>Profesor_has_Materia</a></li>
+<li><a href='#Rol'>Rol</a></li>
+<li><a href='#TipoDocumento'>TipoDocumento</a></li>
+<li><a href='#Usuario'>Usuario</a></li>
+</ul>
+<table id='Boletin'>
+<caption>Boletin</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idBoletin</td>
+    <td>VARCHAR(10)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identificador unico de Boletin.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>nombreColegio</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Palabra o conjunto de palabras que identifican y distinguen a la insititucion.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>fechaEntrega</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Lapso de tiempo  en la cual se da entrega de Boletin a Estudiante  .(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>Estudiante_idEstudiante</td>
+    <td>INT(6)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea identificadora de Estudiante.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>Estudiante_Usuario_documento</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Numero de documento de Estudiante.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>Rol_idRol</td>
+    <td>INT(1)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Nombre de Usuario que realizo Boletin.(Este campo es obligatorio)</td>
+</tr>
+<table id='Estudiante'>
+<caption>Estudiante</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idEstudiante</td>
+    <td>INT(6)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Identificador de estudiante (Este campo es obligatorio).</td>
+</tr>
+<tr>
+    <td>estadoMatricula</td>
+    <td>TINYINT(1)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Estado donde expresara si Estudiante esta activo en la istitucion (Este campo es obligatorio).</td>
+</tr>
+<tr>
+    <td>gradoAsignado</td>
+    <td>VARCHAR(6)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Nivel educativo del que hace parte Estudiante.(Este campo es obligatorio).</td>
+</tr>
+<tr>
+    <td>Usuario_documento</td>
+    <td>VARCHAR(20)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que permite heredar todos los atributos de Usuario a Estudiante (Este campo es obligatorio).</td>
+</tr>
+<tr>
+    <td>Grado_numero</td>
+    <td>VARCHAR(4)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea epresentacion numerica o alfanumerica que muestra el nivel en el que esta clasificado Estudiante.</td>
+</tr>
+<table id='G_Administrativo'>
+<caption>G_Administrativo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>Usuario_documento</td>
+    <td>VARCHAR(20)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>LLave foranea identificador documento Usuario.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>Rol_idRol</td>
+    <td>INT(1)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identificador de Rol con sus correspondientes permisos.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>firma</td>
+    <td>BLOB</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Representacion grafica con la que se da una autorizacion en un proceso.(Este campo es obligatorio)</td>
+</tr>
+<table id='Grado'>
+<caption>Grado</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>numero</td>
+    <td>VARCHAR(4)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identificador en forma de presentacion numerica o alfanumerica que muestra el nivel en el que esta clasificado Estudiante.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>salonAsignado</td>
+    <td>VARCHAR(10)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Espacio designado para la instruccion de Profesor a Estudiante .(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>cantidadEstudiantes</td>
+    <td>TINYINT(3)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Conjunto expresado de manera cuantitativa el numero de Estudiantes.(Este campo es obligatorio)</td>
+</tr>
+<table id='Horario'>
+<caption>Horario</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>Grado_numero</td>
+    <td>VARCHAR(4)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea con la informacion de Grado.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>Materia_idMateria</td>
+    <td>INT(2)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>LLave foranea con la informacion de Materia.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>dia</td>
+    <td>TINYINT(1)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Lapso de tiempo clasificado de lunes a viernes.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>fechaInicio</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Conjunto de datos que expresan un momento en el tiempo donde inicia el calendario educativo.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>fechaFin</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Conjunto de datos que expresan un momento en el tiempo donde finaliza el calendario educativo.(Este campo es obligatorio)</td>
+</tr>
+<table id='Materia'>
+<caption>Materia</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idMateria</td>
+    <td>INT(2)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identificador unico de Materia.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>logro1</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Descripcion de  resultado diferentes actividades que deben ser aprobadas en Materia.</td>
+</tr>
+<tr>
+    <td>logro2</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Descripcion de  resultado diferentes actividades que deben ser aprobadas en Materia.</td>
+</tr>
+<tr>
+    <td>logro3</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Descripcion de  resultado diferentes actividades que deben ser aprobadas en Materia.</td>
+</tr>
+<tr>
+    <td>logro4</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Descripcion de  resultado diferentes actividades que deben ser aprobadas en Materia.</td>
+</tr>
+<tr>
+    <td>logro5</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Descripcion de  resultado diferentes actividades que deben ser aprobadas en Materia.</td>
+</tr>
+<tr>
+    <td>inasistencia</td>
+    <td>TINYINT(2)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Fallas presentadas en Materia.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>horaInicio</td>
+    <td>TIME</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Hora asignada para dar comienzo a materia en un rango horario especifico de la institucion.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>horaFin</td>
+    <td>TIME</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Hora asignada para dar comienzo a materia en un rango horario especifico de la institucion.(Este campo es obligatorio)</td>
+</tr>
+<table id='Nota'>
+<caption>Nota</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idNota</td>
+    <td>INT(4)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identificador de Nota.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>cantidadNotas</td>
+    <td>TINYINT(2)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Cantidad de notas que se le daran a Materia.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>porcentajeNota</td>
+    <td>VARCHAR(3)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>cantidad basada en 100% sobre Nota.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>valorNota</td>
+    <td>VARCHAR(3)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Valor cuantitativo o cualitativo que se le dara a Nota.</td>
+</tr>
+<tr>
+    <td>Materia_idMateria</td>
+    <td>INT(2)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave Foranea de Materia. (Este campo es obligatorio)</td>
+</tr>
+<table id='Observacion'>
+<caption>Observacion</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>fecha</td>
+    <td>DATE</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Conjunto de datos que expresan un momento en el tiempo.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>informe</td>
+    <td>VARCHAR(1000)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Representacion escrita detallada sobre el o los hechos representativos sobre circunstancias de Estudiante.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>validacionGeneral</td>
+    <td>TINYINT(1)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Validacion de dos partes en la que se acepta que el texto generado en informe esta de acuerdo con dichas partes. (Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>Observador_Estudiante_idEstudiante</td>
+    <td>INT(6)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que indica la informacion de Estudiante.(Este campo es obligatorio)</td>
+</tr>
+<table id='Observador'>
+<caption>Observador</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>Estudiante_idEstudiante</td>
+    <td>INT(6)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea de herencia informacion Estudiante.</td>
+</tr>
+<tr>
+    <td>cantidadObservaciones</td>
+    <td>TINYINT(3)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Conjunto de observaciones generadas a Estudiante.</td>
+</tr>
+<tr>
+    <td>Estudiante_idEstudiante</td>
+    <td>INT(6)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identificador de estudiante.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>Estudiante_Usuario_documento</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea en manera de Herencia sobre la informacion de Documento.(Este campo es obligatorio)</td>
+</tr>
+<table id='Profesor'>
+<caption>Profesor</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idProfesor</td>
+    <td>INT(3)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identificador de Profesor.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>area</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Es un campo de estudio en el que se desarrollo de manera profesional Profesor.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>Estudios</td>
+    <td>VARCHAR(120)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Nombre o conjunto de nombres sobre la educacion realizada por Profesor.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>cursoAcargo</td>
+    <td>VARCHAR(4)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Numero o serie de caracteres Alfanumericos que representan un conjunto de estudiantes el cual Profesor tiene una carga de responsabilidad Alta.</td>
+</tr>
+<tr>
+    <td>Usuario_documento</td>
+    <td>VARCHAR(20)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea en manera de Herencia sobre la informacion de Profesor.(Este campo es obligatorio)</td>
+</tr>
+<table id='Profesor_has_Materia'>
+<caption>Profesor_has_Materia</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>Profesor_idProfesor</td>
+    <td>INT(3)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea identificadora de profesor.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>Profesor_Usuario_documento</td>
+    <td>VARCHAR(20)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea en manera de Herencia sobre la informacion de Profesor.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>Materia_idMateria</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>LLave foranea con el identificador de materia.(Este campo es obligatorio)</td>
+</tr>
+<table id='Rol'>
+<caption>Rol</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idRol</td>
+    <td>INT(1)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identificador de Rol con sus correspondientes permisos.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>rol</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>funcion o conjunto de funciones que desempe�a cada Usuario en el software.(Este campo es obligatorio)</td>
+</tr>
+<table id='TipoDocumento'>
+<caption>TipoDocumento</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idTipoDocumento</td>
+    <td>INT(2)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea de tipo de identificacion de Usuario (Este campo es obligatorio).</td>
+</tr>
+<tr>
+    <td>tipoDocumento</td>
+    <td>VARCHAR(4)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Expresa en siglas o abreviaciones el tipo de documento que posee Usuario (Este campo es obligatorio).</td>
+</tr>
+<table id='Usuario'>
+<caption>Usuario</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>documento</td>
+    <td>VARCHAR(20)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identificador de Usuario con el cual se podra acceder al sistema.</td>
+</tr>
+<tr>
+    <td>edad</td>
+    <td>TINYINT(3)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Valor numerico que representa la cantidad de a�os vividos de un Usuario.  (este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>nombre1</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Palabra asignada para distinguir al usuario de manera generica.  (este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>nombre2</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Segunda palabra asignada para distinguir al usuario de manera generica. </td>
+</tr>
+<tr>
+    <td>apellido1</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Nombre de pila de una persona que se transmite de padre a hijo. (este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>apellido2</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Nombre de pila de una persona que se transmite de padre a hijo. </td>
+</tr>
+<tr>
+    <td>email</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Direccion de correo electronico con la que el usuario ingresara al sistema. (este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>telefono_fijo</td>
+    <td>INT(7)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Numero de contacto al domicilio en el que reside el Usuario. </td>
+</tr>
+<tr>
+    <td>telefono_celular</td>
+    <td>INT(10)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Numero de contacto directo del Usuario.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>foto</td>
+    <td>BLOB</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Imagen descriptiva de Usuario.(Este campo es obligatorio)</td>
+</tr>
+<tr>
+    <td>Tipo_idTipoDocumento</td>
+    <td>INT(2)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea de tipo de identificacion de Usuario (Este campo es obligatorio).</td>
+</tr>
+<tr>
+    <td>contrase�a</td>
+    <td>VARCHAR(15)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Serie de caracteres encriptados que permiten al Usuario el acceso al sistema.(Este campo es obligatorio)</td>
+</tr>
+</table>
+</body>
+</html>
