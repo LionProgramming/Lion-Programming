@@ -4,10 +4,7 @@
   > COMPONENTE METODOLOGICO
 
 ### Objetivo especifico
- - Desarrollar un sistema virtual que permita generar reportes
-   académicos y de comportamiento de los estudiantes, mediante la
-   gestión de citaciones, observaciones y registro de notas, con el fin
-   de ofrecer una visión completa y detallada del desempeño estudiantil
+ - Desarrollar un sistema virtual que permita generar reportes académicos y de comportamiento de los estudiantes, mediante la gestión de    citaciones, observaciones y registro de notas, con el fin de ofrecer una visión completa y detallada del desempeño estudiantil
    y su experiencia educativa.
  - Elaborar un perfil individual de cada estudiante, para hacer una   
    breve observación.
