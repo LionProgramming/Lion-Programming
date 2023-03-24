@@ -1,11 +1,24 @@
-# PROYECTO
-  ### LION PROGRAMING
-  
-  > COMPONENTE METODOLOGICO
+ <h1 align="center">
+LION PROGRAMING
+ </h1> 
+ <div align="center">
 
-### Objetivo especifico
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="Logo.png" alt="Logo" width="120" height="120">
+  </a>
+  <br />
+  </div>
+   <br />
+    <br />
+
+ 
+  > COMPONENTE METODOLOGICO
+ <br />
+
+### Objetivo general
  - Desarrollar un sistema virtual que permita generar reportes académicos y de comportamiento de los estudiantes, mediante la gestión de    citaciones, observaciones y registro de notas, con el fin de ofrecer una visión completa y detallada del desempeño estudiantil
    y su experiencia educativa.
+### Objetivo especifico
  - Elaborar un perfil individual de cada estudiante, para hacer una   
    breve observación.
  - Desarrollar un sistema de gestión de datos robusto y seguro que   
@@ -31,4 +44,4 @@ Se obtuvo información mediante encuestas realizadas. Algunas de las respuestas 
 Esta estrategia estará enfocada única y exclusivamente en el ámbito estudiantil colombiano.
 
 
-[RECOLECCIÓN DE INFORMACION](httphttps://docs.google.com/forms/d/e/1FAIpQLSdhEELFD0wHtnvt2pib_SgAEXLS3Mv2MxZzVrsaUBdnPHyDBA/viewform?usp=sf_link:// "Recolección de informacion")
+[RECOLECCIÓN DE INFORMACION](https://docs.google.com/forms/d/e/1FAIpQLSdhEELFD0wHtnvt2pib_SgAEXLS3Mv2MxZzVrsaUBdnPHyDBA/viewform?usp=sf_link:// "Recolección de informacion")
