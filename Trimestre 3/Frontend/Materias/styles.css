@@ -1,0 +1,51 @@
+
+#materias {
+    grid-column: 2/4;
+    border-collapse: collapse;
+    margin-top: -5%;
+    margin-left: 15%;
+    margin-right: 25%;
+    align-items: center;
+    font-size: 100%;
+    box-shadow: 0 0 2% rgba(0, 0, 0, 0.15);
+}
+#materias thead tr {
+    background-color: #2196F3;
+    color: #ffffff;
+    text-align: left;
+}
+#materias th,
+#materias td {
+    padding: 3% 5px ;
+}
+#materias tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+#materias tbody tr:last-of-type {
+    border-bottom: 2px solid #2196F3;
+}
+#materias tbody tr.active-row {
+    font-weight: bold;
+    color: #2196F3;
+}
+.asig{
+    background-color: #2196F3;
+    color: #ffffff;
+    font-weight: bold;
+    border-top: 1px solid #f3f3f3;
+}
+.imagen {
+    display: grid;
+    grid-column: span 3;
+}
+#img {
+    width: 10%;
+    display: grid;
+    border: #212121 solid 2px;
+    margin-left: 55px;
+}
+
+
+
+
+

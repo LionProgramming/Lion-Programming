@@ -1,0 +1,68 @@
+input {
+  border-radius: 10px;
+}
+.titulito {
+  margin: 20px;
+  color: black;
+  -webkit-text-stroke: 2px black;
+}
+.titulote {
+  margin-right: 90px;
+  -webkit-text-stroke: 2px black;
+  color: black;
+  
+}
+.container-fluid:hover{
+  position: fixed;
+}
+form {
+  text-align: center;
+  margin: auto;
+  width: 450px;
+  height: 700px;
+  margin-top: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: rgba(12, 89, 117, 0.342);
+}
+div {
+  color: rgb(8, 8, 8);
+  text-align: center;
+}
+header {
+  background-color:  rgba(12, 89, 117, 0.158);;
+  background-size: cover;
+  background-repeat: none;
+  border-color: black;
+  height: 80px;
+}
+.imagen {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 50px;
+  margin-top: -10px;
+}
+.form-control {
+  max-width: 50%;
+  margin-left: 120px;
+  text-align: center;
+}
+.boton {
+  height: 40px;
+  width: 155px;
+  background: #AAB7B8;
+  border: none;
+  border-radius: 15px;
+  font-size: 17px;
+}
+.boton:hover {
+  height: 40px;
+  width: 155px;
+  background-color: rgba(176, 231, 201, 0.979);
+  border-radius: 15px;
+  font-size: 17px;
+}
+.container {
+  box-shadow: #AAB7B8;
+}
